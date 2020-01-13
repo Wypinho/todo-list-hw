@@ -11,6 +11,8 @@
       <form v-on:submit.prevent="saveNewChore">
         <label for="new-chore">Add a new chore:</label>
         <input id="new-chore" type="text" v-model="newTodo"/>
+        <input type="radio" value="High">High
+        <input type="radio" value="Low">Low
         <input type="submit" value="Add chore"/>
       </form>
       <ul>
