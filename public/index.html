@@ -8,7 +8,14 @@
   </head>
   <body>
     <div id="app">
-
+      <form v-on:submit.prevent="saveNewChore">
+        <label for="new-chore">Add a new chore:</label>
+        <input id="new-chore" type="text" v-model="newTodo"/>
+        <input type="submit" value="Add chore"/>
+      </form>
+      <ul>
+        <li v-for="todo in todos">{{ todo }}</li>
+      </ul>
     </div>
   </body>
 </html>

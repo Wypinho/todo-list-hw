@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: "#app",
     data: {
+      todos: ["Shop", "Housework", "School run"],
+      newTodo: ""
       // items: [
       //   {name: "Egg", isPurchased: false},
       //   {name: "Bacon", isPurchased: false},
@@ -12,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // newItem: {name: "", isPurchased: false}
     },
     methods: {
+      saveNewChore: function() {
+        this.todos.push(this.newTodo);
+        this.newTodo = "";
+      }
       // saveNewItem: function() {
       //   this.items.push(this.newItem);
       //   this.newItem = {name: "", isPurchased: false};
