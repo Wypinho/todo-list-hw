@@ -1,0 +1,22 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  padding: 8px;
+  justify-content: space-around;
+}
+
+li span {
+}
+
+input[type="text", "submit"] {
+  padding: 10px;
+  width: 50%;
+  justify-content: space-around;
+}

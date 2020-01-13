@@ -10,13 +10,18 @@
     <div id="app">
       <form v-on:submit.prevent="saveNewChore">
         <label for="new-chore">Add a new chore:</label>
-        <input id="new-chore" type="text" v-model="newTodo"/>
-        <input type="radio" value="High">High
-        <input type="radio" value="Low">Low
+        <input id="new-chore" type="text" v-model="newTodo.task"/>
+        <input type="radio" value="High" v-model="newTodo.priority">High
+        <input type="radio" value="Low" v-model="newTodo.priority">Low
         <input type="submit" value="Add chore"/>
       </form>
       <ul>
-        <li v-for="todo in todos">{{ todo }}</li>
+        <li v-for="todo in todos">
+          <label for="chore-task">Remember to:</label>
+          <span>{{ todo.task }}</span>
+          <label for="chore-task">If forgotten, the chance of a bollocking is:</label>
+          <span>{{ todo.priority }}</span>
+        </li>
       </ul>
     </div>
   </body>
